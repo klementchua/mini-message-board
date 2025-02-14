@@ -1,4 +1,5 @@
 const path = require('node:path');
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const indexRouter = require('./routes/indexRoutes');
@@ -9,6 +10,6 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use('/', indexRouter);
 
-app.listen(3000, () => {
-  console.log('Running app on port 3000');
+app.listen(process.env.PORT, () => {
+  console.log(`Running app on port ${process.env.PORT}`);
 });
