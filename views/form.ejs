@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <title>Message Form</title>
+  </head>
+  <body>
+    <header><%- include('navbar', { links }) %></header>
+    <form method="POST" action="/new">
+      <h1>Message Form</h1>
+      <input type="text" placeholder="Author Name" name="authorName" />
+      <input type="text" placeholder="Message" name="messageText" />
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

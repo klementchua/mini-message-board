@@ -1,0 +1,9 @@
+<nav>
+  <ul>
+    <% links.forEach(link => { %>
+    <a href="<%= link.href %>">
+      <span><%= link.name %></span>
+    </a>
+    <% }) %>
+  </ul>
+</nav>

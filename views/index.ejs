@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <title>Mini Message Board</title>
+  </head>
+  <body>
+    <header><%- include('navbar', { links }) %></header>
+    <% messages.forEach(msg => { %>
+    <div>
+      <p><%= msg.id %></p>
+      <p><%= msg.text %></p>
+      <p><%= msg.user %></p>
+      <p><%= msg.added %></p>
+      <a href="/<%= msg.id %>"><button>Open</button></a>
+    </div>
+    <% }) %>
+  </body>
+</html>
